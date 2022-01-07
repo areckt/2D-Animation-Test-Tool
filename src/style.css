@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: Verdana;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.fps-wrapper {
+  background-color: #ccc;
+  padding: 2px 5px;
+  border-radius: 4px;
+  min-width: 120px;
+}
+#fps {
+  font-size: 24px;
+  font-family: Consolas;
+}
+
+#start {
+  position: fixed;
+  background-color: hsl(133, 82%, 63%);
+  padding: 4px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  left: 10px;
+  top: 70px;
+  opacity: 0.7;
+  transition: opacity 0.25s;
+  z-index: 999;
+}
+#start:hover {
+  opacity: 1;
+}
+
+#wrapper {
+  background-color: #81c3ff;
+  width: calc(100% - 15px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  padding: 5px;
+  padding-right: 10px;
+}
+
+.square {
+  width: 8px;
+  height: 8px;
+  font-size: 10px;
+  background-color: #1e92e4;
+  border: 0px solid blue;
+}
+
+.opacity {
+  animation: opacity-animation 2s linear alternate infinite;
+}
+@keyframes opacity-animation {
+  to {
+    opacity: 0;
+  }
+}
+
+.rotate {
+  animation: rotate-animation 2s linear alternate infinite;
+}
+@keyframes rotate-animation {
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.translate {
+  animation: translate-animation 2s linear alternate infinite;
+}
+@keyframes translate-animation {
+  to {
+    transform: translate(30px, 30px);
+  }
+}
+
+.color {
+  animation: color-animation 2s linear alternate infinite;
+}
+@keyframes color-animation {
+  to {
+    color: white;
+  }
+}
+
+.border {
+  animation: border-animation 2s linear alternate infinite;
+}
+@keyframes border-animation {
+  to {
+    border-width: 4px;
+  }
+}
